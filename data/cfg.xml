@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE frame[
+<!ENTITY SCALER "0.8"> 
+<!ENTITY WIDTH_FRAME "1500*&SCALER;"> 
+<!ENTITY HEIGHT_FRAME "1000*&SCALER;"> 
+<!ENTITY padding "12"> 
+<!ENTITY BLOCK_SIZE "45*&SCALER;"> 
+<!ENTITY PANEL1_WIDTH "400*&SCALER;" > 
+<!ENTITY PANEL3_WIDTH "494*&SCALER;"> 
+<!ENTITY PANEL1_HEIGHT "401*&SCALER;"> 
+<!ENTITY PANEL3_HEIGHT "870*&SCALER;"> 
+<!ENTITY PANEL4_HEIGHT "200*&SCALER;"> 
+<!ENTITY PANEL6_HEIGHT "353*&SCALER;"> 
+<!ENTITY PANEL_NEXT_WIDTH "100*&SCALER;"> 
+<!ENTITY PANEL_NEXT_HEIGHT "200*&SCALER;"> 
+]
+>
+<game>
+	<frame WIDTH_FRAME = "&WIDTH_FRAME;" HEIGHT_FRAME ="1000*&SCALER;" LIFTER = "30" CORNER_SIZE_LAYER_GAME = "25" PIECE_SIZE ="47*&SCALER;"
+	SPACE_NEXT = "100*&SCALER;" WIDTH_DIGIT = "27*&SCALER;" HEIGHT_DIGIT="66*&SCALER;" SCALER="&SCALER;" PADDING = "16" >
+	<button w= "160*&SCALER;" h="80*&SCALER;">
+		<start x="1059*&SCALER;" y="105*&SCALER;"/>
+		<pause x="1246*&SCALER;" y="105*&SCALER;"/>
+	</button>
+
+		<layer className="com.tetris.ui.LayerBackGround" x="0" y="0" w="0" h="0"></layer>
+		
+		<layer className="com.tetris.ui.LayerAuthor" x="&BLOCK_SIZE;*3+&PANEL1_WIDTH;+&PANEL3_WIDTH;" y="&BLOCK_SIZE;*3+(&PANEL4_HEIGHT;*2)" w="&PANEL1_WIDTH;" h="&PANEL6_HEIGHT;"></layer>
+		
+		<layer className="com.tetris.ui.LayerButton" x="&BLOCK_SIZE; * 3 + &PANEL1_WIDTH; + &PANEL3_WIDTH;" y="&BLOCK_SIZE;" w="&PANEL1_WIDTH;" h="&PANEL4_HEIGHT;"></layer>
+		
+		<layer className="com.tetris.ui.LayerDataBase" x="&BLOCK_SIZE;" y="&BLOCK_SIZE;" w="&PANEL1_WIDTH;" h="&PANEL1_HEIGHT;"></layer>
+		
+		<layer className="com.tetris.ui.LayerGame" x="(&BLOCK_SIZE; *2) + &PANEL1_WIDTH;" y="&BLOCK_SIZE;" 
+		w="&PANEL3_WIDTH;" h="&PANEL3_HEIGHT;"></layer>
+		
+		<layer className="com.tetris.ui.LayerScore" x="&BLOCK_SIZE; * 3 + &PANEL1_WIDTH; + &PANEL3_WIDTH;"
+		 y="(&BLOCK_SIZE; *2) + &PANEL4_HEIGHT;" w="&PANEL1_WIDTH;" h="&PANEL4_HEIGHT;"></layer>
+		
+		<layer className="com.tetris.ui.LayerVersion" x="&BLOCK_SIZE;" y="(&BLOCK_SIZE; *2) + &PANEL1_HEIGHT;" w="&PANEL1_WIDTH;"
+		 h="&PANEL1_HEIGHT;"></layer>
+
+	</frame>
+	<system X_START = "0" X_END = "9" Y_START= "0" Y_END = "17" GAP = "12">
+		<rect shiftable="true"><point x="4" y ="0"/><point x="3" y ="0"/><point x="5" y ="0"/><point x="6" y ="0"/></rect>
+		<rect shiftable="true"><point x="4" y ="0"/><point x="3" y ="0"/><point x="5" y ="0"/><point x="4" y ="1"/></rect>
+		<rect shiftable="true"><point x="4" y ="0"/><point x="3" y ="0"/><point x="5" y ="0"/><point x="3" y ="1"/></rect>
+		<rect shiftable="true"><point x="4" y ="0"/><point x="5" y ="0"/><point x="3" y ="1"/><point x="4" y ="1"/></rect>
+		<rect shiftable="false"><point x="4" y ="0"/><point x="5" y ="0"/><point x="4" y ="1"/><point x="5" y ="1"/></rect>
+		<rect shiftable="true"><point x="4" y ="0"/><point x="3" y ="0"/><point x="5" y ="0"/><point x="5" y ="1"/></rect>
+		<rect shiftable="true"><point x="4" y ="0"/><point x="3" y ="0"/><point x="4" y ="1"/><point x="5" y ="1"/></rect>
+	</system>
+	<data MAX_DATA_ROWS = "5" HEIGHT_BAR="50*&SCALER;">
+		<dataA className="com.tetris.dao.DataBase">
+			<param key="" value=""></param>
+			<param key="" value=""></param>
+			<param key="" value=""></param>
+			<param key="" value=""></param>
+		</dataA>
+		<dataB className="com.tetris.dao.DataDisk">
+			<param key="path" value="data/record.dat"></param>
+		</dataB>
+	</data>
+</game>
